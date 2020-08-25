@@ -5,10 +5,10 @@ public class Vehicle {
     Integer maxSpeed;
     String color;
     void moveOn(){
-        System.out.println("sigue adelante");
+        System.out.println("Sigue adelante");
     }
     void brake(){
-        System.out.println("frena");
+        System.out.println("Frena");
     }
 
 }
