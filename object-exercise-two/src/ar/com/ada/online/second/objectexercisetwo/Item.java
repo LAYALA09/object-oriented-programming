@@ -1,7 +1,6 @@
 package ar.com.ada.online.second.objectexercisetwo;
 
 
-
 import java.util.Date;
 
 public class Item {
@@ -11,9 +10,8 @@ public class Item {
     Date expirationDate;
 
 
-
     void calculateTax() {
-        this.tax= this.price * 0.21;
+        this.tax = this.price * 0.21;
 
     }
 
@@ -23,12 +21,17 @@ public class Item {
     }
 
 
-         Boolean canItBeSold(){
+    Boolean canItBeSold() {
         Date today = new Date();
-        Boolean result= expirationDate.after(today);
-             return result;
-         }
-         }
+        // Boolean result= expirationDate.after(today);
+        //  return result;
+        Boolean canItBeSold = true;
+        if (today.after(this.expirationDate)) {
+            canItBeSold = false;
+        }
+        return canItBeSold;
+    }
+}
 
 
 
