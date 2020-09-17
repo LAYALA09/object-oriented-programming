@@ -34,17 +34,17 @@ public class ElectricalVehicle extends Vehicle {
     }
 
     public void technicalSheet() {
-        if (year < 2007){
-            System.out.println("No existe modelo para este año");
-        }else {
-            System.out.println("Es un auto de ultima tecnologia");
+        if (year < 2007) {
+            System.out.println("# No existe modelo para este año");
+        } else {
+            System.out.println("# Es un auto de última tecnología");
         }
-            System.out.printf("Marca : %s\n", this.brand);
-            System.out.printf("Modelo : %s\n", this.model);
-            System.out.printf("Año  : %s\n", this.year);
-            System.out.print("\n");
+        System.out.printf("Marca : %s\n", this.brand);
+        System.out.printf("Modelo : %s\n", this.model);
+        System.out.printf("Año  : %s\n", this.year);
+        System.out.print("\n");
 
-        }
+    }
 
 
     @Override
@@ -76,7 +76,7 @@ public class ElectricalVehicle extends Vehicle {
         ElectricalVehicle that = (ElectricalVehicle) obj;
 
 
-        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year)&& potency.equals(that.potency);
+        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year) && potency.equals(that.potency);
 
 
     }

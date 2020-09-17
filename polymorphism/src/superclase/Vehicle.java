@@ -44,7 +44,7 @@ public class Vehicle {
     }
 
     public void technicalSheet() {
-        System.out.println("Este vehiculo no tiene categoria asignada");
+        System.out.println("# Este vehiculo no tiene categoria asignada");
         System.out.printf("Marca : %s\n", this.brand);
         System.out.printf("Modelo : %s\n", this.model);
         System.out.printf("Año  : %s\n", this.year);
@@ -79,10 +79,10 @@ public class Vehicle {
         if (obj == null || this.getClass() != obj.getClass()) return false;
 
 
-        Vehicle that = (Vehicle) obj;
+        Vehicle that = (Vehicle ) obj;
 
 
-        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year);
+        return brand.equals(that.brand +1 ) && model.equals(that.model + 1) && year.equals(that.year + 1);
 
 
     }

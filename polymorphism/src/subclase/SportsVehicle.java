@@ -33,17 +33,19 @@ public class SportsVehicle extends Vehicle {  //Hereda de Vehicle
     public Integer getRpm() {
         return rpm;
     }
+
     public void technicalSheet() {
         if (rpm >= 0 && rpm <= 50) {
-            System.out.println("“El auto es muy bonito, pero solo sirve para salir a pasear");
+            System.out.println("# El auto es muy bonito, pero solo sirve para salir a pasear");
         } else {
             if (rpm <= 300) {
-                System.out.println("Con este auto puedes desafiar a cualquiera en la pista");
+                System.out.println("# Con este auto puedes desafiar a cualquiera en la pista");
             } else {
                 if (rpm <= 600) {
-                    System.out.println("Con este auto puedes desafiar a cualquiera en la pista");
+                    System.out.println("# Si tienes este  auto, debe considerar participar en Nazcar");
+                } else {
+                    System.out.println("# ¿Eres parte del elenco de rápidos y furiosos?");
                 }
-                System.out.println("¿Eres parte del elenco de rápidos y furiosos?”");
             }
         }
         System.out.printf("Marca : %s\n", this.brand);
@@ -81,7 +83,7 @@ public class SportsVehicle extends Vehicle {  //Hereda de Vehicle
         SportsVehicle that = (SportsVehicle) obj;
 
 
-        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year)&& rpm.equals(that.rpm);
+        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year) && rpm.equals(that.rpm);
 
 
     }

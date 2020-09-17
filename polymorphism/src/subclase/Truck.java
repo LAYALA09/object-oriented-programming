@@ -8,7 +8,7 @@ public class Truck extends Vehicle {
 
     private Integer maxLoad;
 
-//constructor 1
+    //constructor 1
     public Truck() {
 
     }
@@ -33,11 +33,12 @@ public class Truck extends Vehicle {
     public Integer getMaxLoad() {
         return maxLoad;
     }
+
     public void technicalSheet() {
-        if (maxLoad < 100){
-            System.out.println("Para iniciar un negocio de flete, está muy bien este auto");
-        }else {
-            System.out.println("“Tienes que usar este auto en el campo, es una máquina de trabajo!!");
+        if (maxLoad < 100) {
+            System.out.println("# Para iniciar un negocio de flete, está muy bien este auto");
+        } else {
+            System.out.println("# Tienes que usar este auto en el campo, es una máquina de trabajo!!");
         }
         System.out.printf("Marca : %s\n", this.brand);
         System.out.printf("Modelo : %s\n", this.model);
@@ -45,7 +46,6 @@ public class Truck extends Vehicle {
         System.out.print("\n");
 
     }
-
 
 
     @Override
@@ -74,10 +74,10 @@ public class Truck extends Vehicle {
         if (obj == null || this.getClass() != obj.getClass()) return false;
 
 
-        Truck  that = (Truck ) obj;
+        Truck that = (Truck) obj;
 
 
-        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year)&& maxLoad.equals(that.maxLoad);
+        return brand.equals(that.brand) && model.equals(that.model) && year.equals(that.year) && maxLoad.equals(that.maxLoad);
 
 
     }

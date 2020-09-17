@@ -8,19 +8,63 @@ import superclase.Vehicle;
 public class App {
 
     public static void main(String[] args) {
-        Vehicle vehicle= new Vehicle("Ford", "novent",2009);
-        Vehicle electricalVehicle= new ElectricalVehicle("Audi", "xwa",2005,600);
-        Vehicle sportsVehicle= new SportsVehicle("Audi", "xwa",2010,250);
-        Vehicle truck = new Truck("Audi", "xwa",2012,100);
+        Vehicle v[] = new Vehicle[12];
+        v[0] = new Vehicle("Ford", "Focus", 2009);
+        v[1] = new Vehicle("Ford", "Mustang", 2003);
+        v[2] = new Vehicle("Ford", "Kuga", 2018);
+        v[3] = new ElectricalVehicle("Audi", "Sportback", 2015, 450);
+        v[4] = new ElectricalVehicle("BMW", "Coupe", 2007, 320);
+        v[5] = new ElectricalVehicle("Ferrari", "Spider", 2005, 400);
+        v[6] = new SportsVehicle("Nissan", "Gtr", 2011, 465);
+        v[7] = new SportsVehicle("Lamborghini", "Coupe", 2010, 650);
+        v[8] = new SportsVehicle("Camaro", "SS", 2010, 49);
+        v[9] = new Truck("Chevrolet", "xwa", 2012, 99);
+        v[10] = new Truck("Alfa Romeo", "Mille", 2018, 150);
+        v[11] = new Truck("Citroen", "Jeeps", 2012, 100);
 
-         vehicle.technicalSheet();
-         electricalVehicle.technicalSheet();
-        sportsVehicle.technicalSheet();
-        truck.technicalSheet();
+        for (Vehicle vehicle1 : v) {
+            vehicle1.technicalSheet();
+            System.out.println("toString: " + vehicle1);
+            System.out.println("Vehicle hashCode: " + vehicle1.hashCode());
+
+            System.out.printf("\nSe comprara si %s es igual a %s  " +
 
 
+                    "\n Result =  %s\n", vehicle1 , vehicle1  , vehicle1.equals(vehicle1));
 
+            System.out.println(" ");
+
+        }
+       // System.out.println("toString: " + v[0]);
+        //System.out.println("toString: " + v[1]) ;
+        //System.out.println("toString: " + v[2] );
 
 
     }
+
+
+
+       // System.out.printf("\nSe comprara si %s es igual a %s " +
+
+
+               //"\n Result =  %s\n", caso1, caso2, caso1.equals(caso2));
+
+
+      //  System.out.printf("\nSe comprara si %s es igual a %s " +
+
+
+               // "\n Result =  %s\n", caso1, caso3, caso1.equals(caso3));
+
+
+        //System.out.printf("\nSe comprara si %s es igual a %s " +
+
+
+            //   "\n Result =  %s\n", caso3, caso4, caso3.equals(caso4));
+        //System.out.printf("\nSe comprara si %s es igual a %s " +
+
+
+              //  "\n Result =  %s\n", caso1, caso1, caso1.equals(caso1));
+
+
 }
+
