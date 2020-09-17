@@ -79,10 +79,10 @@ public class Vehicle {
         if (obj == null || this.getClass() != obj.getClass()) return false;
 
 
-        Vehicle that = (Vehicle ) obj;
+        Vehicle that = (Vehicle) obj;
 
 
-        return brand.equals(that.brand +1 ) && model.equals(that.model + 1) && year.equals(that.year + 1);
+        return brand.equals(that.brand + 1) && model.equals(that.model + 1) && year.equals(that.year + 1);
 
 
     }

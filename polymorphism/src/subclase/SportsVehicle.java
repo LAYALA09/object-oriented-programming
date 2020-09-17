@@ -76,7 +76,6 @@ public class SportsVehicle extends Vehicle {  //Hereda de Vehicle
 
         if (this == obj) return true;
 
-
         if (obj == null || this.getClass() != obj.getClass()) return false;
 
 

@@ -45,26 +45,7 @@ public class App {
 
 
 
-       // System.out.printf("\nSe comprara si %s es igual a %s " +
 
-
-               //"\n Result =  %s\n", caso1, caso2, caso1.equals(caso2));
-
-
-      //  System.out.printf("\nSe comprara si %s es igual a %s " +
-
-
-               // "\n Result =  %s\n", caso1, caso3, caso1.equals(caso3));
-
-
-        //System.out.printf("\nSe comprara si %s es igual a %s " +
-
-
-            //   "\n Result =  %s\n", caso3, caso4, caso3.equals(caso4));
-        //System.out.printf("\nSe comprara si %s es igual a %s " +
-
-
-              //  "\n Result =  %s\n", caso1, caso1, caso1.equals(caso1));
 
 
 }

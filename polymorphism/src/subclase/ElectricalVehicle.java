@@ -37,7 +37,7 @@ public class ElectricalVehicle extends Vehicle {
         if (year < 2007) {
             System.out.println("# No existe modelo para este año");
         } else {
-            System.out.println("# Es un auto de última tecnología");
+            System.out.println("# blocEs un auto de última tecnología");
         }
         System.out.printf("Marca : %s\n", this.brand);
         System.out.printf("Modelo : %s\n", this.model);

@@ -70,7 +70,6 @@ public class Truck extends Vehicle {
 
         if (this == obj) return true;
 
-
         if (obj == null || this.getClass() != obj.getClass()) return false;
 
 
