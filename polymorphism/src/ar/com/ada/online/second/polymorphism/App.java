@@ -27,17 +27,18 @@ public class App {
             System.out.println("toString: " + vehicle1);
             System.out.println("Vehicle hashCode: " + vehicle1.hashCode());
 
-            System.out.printf("\nSe comprara si %s es igual a %s  " +
 
-
-                    "\n Result =  %s\n", vehicle1 , vehicle1  , vehicle1.equals(vehicle1));
-
-            System.out.println(" ");
 
         }
-       // System.out.println("toString: " + v[0]);
-        //System.out.println("toString: " + v[1]) ;
-        //System.out.println("toString: " + v[2] );
+        System.out.printf("\nSe comprara si %s es igual a %s  " +
+
+
+                "\n Result =  %s\n", v[1] , v[4] , v[1].equals(v[4]));
+
+        System.out.printf("\nSe comprara si %s es igual a %s " +
+
+
+                "\n Result =  %s\n", v[8], v[11], v[8].equals(v[11]));
 
 
     }
