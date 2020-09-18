@@ -1,11 +1,12 @@
-import ar.com.ada.online.second.claseabstracta.Poligono;
+package ar.com.ada.online.second.claseabstracta;
 
 public class Triangle extends Poligono {
-   private double oneSide;
+
+    private double oneSide;
     private double secondSide;
     private double threeSide;
 
-    public Triangle( double oneSide, double secondSide, double threeSide) {
+    public Triangle(double oneSide, double secondSide, double threeSide) {
         super(3);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
@@ -26,18 +27,16 @@ public class Triangle extends Poligono {
 
     @Override
     public String toString() {
-        return "Triangle:" + super.toString()+
+        return "Triangle:" + super.toString() +
                 "\noneSide=" + oneSide +
                 ", secondSide=" + secondSide +
-                ", threeSide=" + threeSide ;
+                ", threeSide=" + threeSide;
     }
+
     @Override
-    public double area(){
-        double p= (oneSide+secondSide+threeSide)/2;
-        return Math.sqrt((p*(p-oneSide)*(p-secondSide)*(p-threeSide)));
+    public double area() {
+        double p = (oneSide + secondSide + threeSide) / 2;
+        return Math.sqrt((p * (p - oneSide) * (p - secondSide) * (p - threeSide)));
 
     }
 }
-
-
-

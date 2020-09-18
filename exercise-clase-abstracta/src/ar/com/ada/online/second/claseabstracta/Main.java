@@ -1,4 +1,13 @@
+//Hacer un programa para calcular el area de poligono (triangulos y rectangulos)
+//El programa debe ser capaz de almacenar en un arreglo N triangulos y rectangulos, y al mostrar el area y los datos de c/u. Para ello se tendra lo sgte:
+
+//super class called Poligono.
+//sub class called Triangle
+//sub class called rectangle
+
 package ar.com.ada.online.second.claseabstracta;
+//Clase abstracta no puede ser instanciada, pero si sus subclases
+//En una clase abstracta no se permite la creación de objetos. Para ello, se utiliza la palabra clave abstract.
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,47 +16,79 @@ public class Main {
     static ArrayList<Poligono> poligono = new ArrayList<Poligono>();///arreglo dinamico al estar fuera de main tiene que ser static y hay q importar la clase de ArrayList.
     static Scanner keyboard = new Scanner(System.in);
 
+
     public static void main(String[] args) {
-        fillPolygon();
+        fillPolygon();//llenar poligono
+        showResult();//mostrar resultado
+
     }
-        // llenar poligono
-        public static void fillPolygon() {
-            int option;
-            char response;
+
+    // llenar poligono
+    public static void fillPolygon() {
+        int option;
+        char response;
+        do {
             do {
-                do {
 
-                    System.out.println("Digitize what polygon you want");
-                    System.out.println("1. Triangle");
-                    System.out.println("2. Triangle");
-                    System.out.print("Option: ");
-                    option = keyboard.nextInt();
+                System.out.println("Digitize what polygon you want");
+                System.out.println("1. Triangle");
+                System.out.println("2. Triangle");
+                System.out.print("Option: ");
+                option = keyboard.nextInt();
 
-                } while (option < 1 || option > 2);
-                switch (option) {
-                    case 1:fullOfTriangle();// llenar triangulo
-                        break;
-                    case 2:  // llenar rectangulo
-                        break;
-                }
-                System.out.print("\nYou want to introduce another triangle(s/n: ");
-                response = keyboard.next().charAt(0);
-                System.out.println("");
+            } while (option < 1 || option > 2);
+            switch (option) {
+                case 1:
+                    fullOfTriangle();// llenar triangulo
+                    break;
+                case 2:
+                    fullOfRectangle(); // llenar rectangulo
+                    break;
+            }
+            System.out.print("\nYou want to introduce another triangle(s/n: ");
+            response = keyboard.next().charAt(0);///guarda solo un caracter, y declarmos la variable tipo char
 
-            } while (response == 's' || response == 'S');
+            System.out.println("");
 
-        }
-        public static <Triangle> void fullOfTriangle(){
-        double oneSide,secondSide,threeSide;
+        } while (response == 's' || response == 'S');
+
+    }
+
+    //llenado de triangulo
+    public static void fullOfTriangle() {
+        double side1, side2, side3;
         System.out.print("\nType the side 1 triangle ");
-            oneSide=keyboard.nextDouble();
-            System.out.print("\nType the side 2 triangle");
-            secondSide=keyboard.nextDouble();
-            System.out.print("\nType the side 3 triangle ");
-            threeSide=keyboard.nextDouble();
-           // Triangle  triangle=new Triangle (oneSide,secondSide,threeSide);
-//poligono.add(triangle);
+        side1 = keyboard.nextDouble();
+        System.out.print("\nType the side 2 triangle");
+        side2 = keyboard.nextDouble();
+        System.out.print("\nType the side 3 triangle ");
+        side3 = keyboard.nextDouble();
+        Triangle triangle = new Triangle(side1, side2, side3);//intanciar subclase Triangle
+        //guardamos un triangulo dentro de poligono
+        poligono.add(triangle);
+    }
 
+    //llenado de rectangulo
+    public static void fullOfRectangle() {
+        double side1, side2;
+        System.out.print("\nType the side 1 rectangle ");
+        side1 = keyboard.nextDouble();
+        System.out.print("\nType the side 2 rectangle");
+        side2 = keyboard.nextDouble();
+
+        Rectangle rectangle = new Rectangle(side1, side2);//intanciar subclase Rectangle
+        //guardamos un rectangulo dentro de poligono
+        poligono.add(rectangle);
+    }
+
+    public static void showResult() { //metodo para mostrar resultados
+        //recorriendo el arreglo de poligono
+        for (Poligono poli : poligono) {
+            System.out.println(poli.toString());
+            System.out.println("Area =  " + poli.area());
+            System.out.println("");
         }
     }
+}
+
 

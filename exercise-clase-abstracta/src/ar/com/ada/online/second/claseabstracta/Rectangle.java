@@ -1,6 +1,6 @@
 package ar.com.ada.online.second.claseabstracta;
 
-public class  Rectangle extends Poligono{
+public class Rectangle extends Poligono {
     private double oneSide;
     private double secondSide;
 
@@ -25,9 +25,10 @@ public class  Rectangle extends Poligono{
                 ", secondSide=" + secondSide
                 ;
     }
+
     @Override
-    public double area(){
-        return oneSide*secondSide;
+    public double area() {
+        return oneSide * secondSide;
 
     }
 }

@@ -14,10 +14,10 @@ public abstract class Poligono {
     @Override//Indica la sobreescritura y porque pertenece a la clase object
     public String toString() {///Metodo sobreescribido sirve para mostrar datos
         return
-                "Number the sides=" + numberSides +
-                '}';
+                "Number the sides=" + numberSides;
     }
+
     public abstract double area();////declaramos el metodo area como abstracto
 
-    }
+}
 
